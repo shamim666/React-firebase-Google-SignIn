@@ -3,9 +3,7 @@ import { useState } from "react";
 import './App.css';
 import firebaseAuthentication from './Firebase/firebase.initialize';
 
-// this comes from https://firebase.google.com/docs/auth/web/google-signin?authuser=0 
-// Google sign-in option point number 1.
-const provider = new GoogleAuthProvider();
+
 
 // this comes from  firebase.initialize.js 
 firebaseAuthentication();
@@ -15,7 +13,9 @@ firebaseAuthentication();
 function App() {
   const [user, setUser] = useState({})
   const auth = getAuth();
-
+// this comes from https://firebase.google.com/docs/auth/web/google-signin?authuser=0 
+// Google sign-in option point number 1.
+const provider = new GoogleAuthProvider();
 
 
   const handleGoogleSignIn = () => {
